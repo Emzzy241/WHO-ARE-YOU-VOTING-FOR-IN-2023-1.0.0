@@ -18,11 +18,22 @@ class VotingFor{
 
         // Now describing the Political Aspirants for all of the listed Parties above
 
-        COnsole.WriteLine("The Flag Bearer of the APC is Bolaji Ahmed TInubu");
+        Console.WriteLine("The Flag Bearer of the APC is Bolaji Ahmed TInubu");
         Console.WriteLine("The Flag Bearer of the PDP is Atiku Abubakar");
         Console.WriteLine("The Presidential Aspirant of the LP is Peter Obi");
         Console.WriteLine("The Flag Bearer of the NNPP is Kwankwaso");
 
-        // FInally the Logic to determine
+        // FInally the Logic to determine Eligible Voting
+        // using the C# comparison operator(==)
+
+        Console.WriteLine("Having Said all of That, If you would love to continue with Me Application, Press 'Y' for Yeah and 'N' No to exit the Applicatio");
+
+        string usersAns = Console.ReadLine();
+
+        if (usersAns == "Y")
+        {
+            Console.WriteLine("THanks for Continuing to use Dynasty's Small but scalable App");
+        }
+
     }
 }
