@@ -61,19 +61,43 @@ class VotingFor
                 // don't forget, the .ReadLine() method works with only strings and thats why we stored it in a string variable
                 // the Console.ReadLine() variable value needs to be converted into an Integer because we both know: Age is a number(or an Integer and not a string)
 
+
+                // if (intUsersAge >= 18)
+                // {
+
+                // }
+                // else if (intUsersAge == 17)
+                // {
+                //     Console.WriteLine("You only have one more year to go, Come back next Year to cast your Vote");
+                // }
+                // else if (intUsersAge < 17)
+                // {
+                //     Console.WriteLine("We are deeply Sorry my User, our Organization has its Policies on only allowing People Older than 18 to cast their Votes.... YOu can Learn more on Voting rights by running a Google Search");
+                // }
+
+                // MAKING USE OF SWITCH CASE STATEMENTS IN PLACE OF MY BRANCH
+                // in switch case statements; we do not need to keep writing and rewriting the name of our variable over and over again 
+                // our switch statement moves through each case to see if it matches the specified expression... in our case the value of  intUsersAge
+                // if there is a match between the case and the expression, then the code within the case will run
+                // and Yes we can use both the built-in "return" keyword or we can stick with our amazing Console.WriteLine()way... I used both of them to prove how true it was
+
+
+
                 int intUsersAge = int.Parse(usersAge);
 
-                if (intUsersAge >= 18)
+                switch (intUsersAge)
                 {
+                    case >= 18:
+                        Console.WriteLine("You are eligible to cast your Vote");
+                        break;
 
-                }
-                else if (intUsersAge == 17)
-                {
-                    Console.WriteLine("You only have one more year to go, Come back next Yer when you are older and cast your Vote");
-                }
-                else if (intUsersAge < 17)
-                {
-                    Console.WriteLine("I am deeply Sorry my User, our Organization has its Policies on only allowing People Older than 18 to cast their Votes.... YOu can Learn more on Voting rights by running a Google Search");
+                    case 17:
+                        Console.WriteLine("You only have one more year to go, Come back next Year to cast your Vote") ;
+                        break;
+
+                    default:
+                        Console.WriteLine("We are deeply Sorry my User, our Organization has its Policies on only allowing People Older than 18 to cast their Votes.... YOu can Learn more on Voting rights by running a Google Search");
+                        break;
                 }
 
 
