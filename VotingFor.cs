@@ -30,10 +30,22 @@ class VotingFor{
 
         string usersAns = Console.ReadLine();
 
+        // a boolean to determine if truly my user enterred in a string containing Y or N
+
+        // don't forget: .GetType() method will get me the name of the class and also the namespace that class exists in... A format like(System.String or System.Int32) where String is the class name and lives within the System namespace
+        // THer eis another method though that will return to me just the exact type of any datatype and that is the GetTypeCode() method.... So instead of returning to me the classname and the namespace that class exists in, it just returns me the classname only(e.g String).... As yu can see here, it basically returns me only String unlike the 
+        // GetType() method that will both the classname and the namespace that classname exists in
+
+
+        string userAnsString = usersAns.GetTypeCode()
+
         if (usersAns == "Y")
         {
-            Console.WriteLine("THanks for Continuing to use Dynasty's Small but scalable App");
+            Console.WriteLine("Thanks for Continuing to use Dynasty's Small but scalable Voting App");
+            Console.WriteLine("Thanks for Continuing to use Dynasty's Small but scalable Voting App");
         }
+
+
 
     }
 }
