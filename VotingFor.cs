@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections.Generic; // don't forget this was added so we can make use of the C# Dictionary easily.... I love adding it because yo never know, you may need to add a Dictionary in your code
 
 class VotingFor
 {
@@ -85,20 +85,59 @@ class VotingFor
 
                 int intUsersAge = int.Parse(usersAge);
 
+                // Where I planned to use only return statements and for some reasons Which I do not know, It didn't work(I got the error: Since 'VotingFor.Main()' returns void, a return keyword must not be followed by an object expression [VotingFor]csharp(CS0127))
+
+
+
+                /* switch (intUsersAge)
+                {
+                     case >= 18:
+                        return "You are eligible to cast your Vote";
+
+                        // Now After this, I still need to
+                        // break;
+
+                    case 17:
+                        return "You only have one more year to go, Come back next Year to cast your Vote";
+                        // break;
+
+                    // the default case runs when they are no more matches with the specified expression(here the default case runs when users Age is less than  17)
+                    default:
+                        return "We are deeply Sorry my User, our Organization has its Policies on only allowing People Older than 18 to cast their Votes.... YOu can Learn more on Voting rights by running a Google Search";
+                        // break;
+
+                        // It is worthy to note that even if we match with a case before default case, all of the cases thereafter will be run unless we include a return or break; statement in each case
+                        // but for some reason which I do not know for now, a return statement ain't working in Vscode... THe Above was what I tried 
+                        // So, in the below code I used Console.WriteLine() with a break; and voila no errors
+                        // NOTE: you cannot use return and break statements at a time, the break statement becomes an unreachable code Detected if you do so
+
+                }
+
+                */
+
+                // Where I used both COnsole.WriteLine() and a break; statement and it worked perfectly
+
                 switch (intUsersAge)
                 {
-                    case >= 18:
+                     case >= 18:
                         Console.WriteLine("You are eligible to cast your Vote");
+
+                        
+                        // Now After this, I now Know my user is of the right age to cast his/her vote
+                        
                         break;
 
                     case 17:
-                        Console.WriteLine("You only have one more year to go, Come back next Year to cast your Vote") ;
+                        Console.WriteLine("You only have one more year to go, Come back next Year to cast your Vote");
                         break;
 
+                    // the default case runs when they are no more matches with the specified expression(here the default case runs when users Age is less than  17)
                     default:
                         Console.WriteLine("We are deeply Sorry my User, our Organization has its Policies on only allowing People Older than 18 to cast their Votes.... YOu can Learn more on Voting rights by running a Google Search");
                         break;
+
                 }
+
 
 
             }
@@ -118,4 +157,4 @@ class VotingFor
 
 
     }
-}
+} 
